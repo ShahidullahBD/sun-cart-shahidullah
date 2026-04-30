@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 10,
+    "description": "Premium UV protection sunglasses designed to shield your eyes from harmful sun rays during summer outings. Features a lightweight frame, polarized lenses for reduced glare, and a stylish modern design perfect for beach trips, road travel, and everyday casual wear.",
+    "image": "https://static.vecteezy.com/system/resources/thumbnails/034/071/768/small/sunglasses-on-a-beach-ai-generated-photo.jpg",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Cotton Beach T-Shirt",
+    "brand": "CoolWear",
+    "price": 18,
+    "rating": 4.5,
+    "stock": 20,
+    "description": "Soft and breathable cotton beach t-shirt made for hot summer weather. Crafted with moisture-absorbing fabric to keep you cool and comfortable all day. Ideal for beach walks, vacations, outdoor sports, or casual daily outfits.",
+    "image": "https://thumbs.dreamstime.com/b/summer-tshirt-design-vibes-poster-vector-graphics-t-shirt-vintage-beach-typography-retro-designs-holiday-vacation-svg-280154656.jpg",
+    "category": "Clothing"
+  },
+  {
+    "id": 3,
+    "name": "SPF 50 Sunscreen Lotion",
+    "brand": "SkinGuard",
+    "price": 12,
+    "rating": 4.8,
+    "stock": 15,
+    "description": "High-performance SPF 50 sunscreen lotion that offers strong UVA and UVB protection for all skin types. Water-resistant formula suitable for swimming, beach activities, hiking, and long outdoor exposure. Keeps skin moisturized without greasy residue.",
+    "image": "https://cdn.vectorstock.com/i/1000v/56/17/summer-sunscreen-product-display-vector-35405617.jpg",
+    "category": "Skincare"
+  },
+  {
+    "id": 4,
+    "name": "Straw Beach Hat",
+    "brand": "SunnyStyle",
+    "price": 14,
+    "rating": 4.6,
+    "stock": 12,
+    "description": "Elegant straw beach hat with a wide brim for excellent sun protection. Lightweight woven material allows airflow while keeping you cool. Great for vacations, picnics, beach relaxation, and adding a fashionable summer touch to any outfit.",
+    "image": "https://i5.walmartimages.com/asr/10b315a9-63a7-46f2-8998-272e6e69c19c_1.d9b2a3ee4a0d72bc8979f6fabb271274.jpeg",
+    "category": "Accessories"
+  },
+  {
+    "id": 5,
+    "name": "Flip Flops",
+    "brand": "WalkEasy",
+    "price": 10,
+    "rating": 4.4,
+    "stock": 25,
+    "description": "Comfortable and flexible flip flops built for summer adventures. Non-slip sole provides stability on wet surfaces, while cushioned footbeds offer lasting comfort. Perfect for beach visits, poolside use, travel, and daily casual wear.",
+    "image": "https://st2.depositphotos.com/1105977/11226/i/950/depositphotos_112262714-stock-photo-summer-flipflops-on-sandy-beach.jpg",
+    "category": "Footwear"
+  },
+  {
+    "id": 6,
+    "name": "Inflatable Pool Float",
+    "brand": "FloatFun",
+    "price": 22,
+    "rating": 4.7,
+    "stock": 8,
+    "description": "Large inflatable pool float made from durable puncture-resistant material for summer fun. Easy to inflate and deflate, lightweight to carry, and ideal for pools, lakes, or beach resorts. Great for relaxing under the sun.",
+    "image": "https://thumbs.dreamstime.com/z/child-inflatable-pineapple-toy-ring-float-swimming-pool-little-girl-learning-to-swim-dive-outdoor-pool-tropical-214526576.jpg",
+    "category": "Beach Accessories"
+  },
+  {
+    "id": 7,
+    "name": "Summer Shorts",
+    "brand": "BreezeFit",
+    "price": 20,
+    "rating": 4.5,
+    "stock": 18,
+    "description": "Stylish summer shorts made with breathable quick-dry fabric for ultimate comfort in warm weather. Features an elastic waistband, practical pockets, and a modern fit. Ideal for travel, workouts, beachwear, and casual outdoor use.",
+    "image": "https://gh.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/66/517528/2.jpg?3139",
+    "category": "Clothing"
+  },
+  {
+    "id": 8,
+    "name": "Reusable Water Bottle",
+    "brand": "HydroLife",
+    "price": 16,
+    "rating": 4.9,
+    "stock": 30,
+    "description": "Insulated reusable water bottle designed to keep beverages cold for hours during hot summer days. Leakproof lid and durable stainless steel body make it ideal for gym sessions, hiking, office use, travel, and beach trips.",
+    "image": "https://media.gettyimages.com/id/1425983226/photo/cute-boy-drinking-water.jpg?s=612x612&w=gi&k=20&c=r4qECQG8uFQKV-g-YZVYzexiK3P7RI4F8CO2XSrLU-8=",
+    "category": "Outdoor"
+  },
+  {
+    "id": 9,
+    "name": "Cooling Face Mist",
+    "brand": "FreshGlow",
+    "price": 11,
+    "rating": 4.6,
+    "stock": 14,
+    "description": "Refreshing facial mist infused with hydrating ingredients to instantly cool and revive skin in summer heat. Lightweight spray helps reduce dryness, refresh makeup, and provide a soothing sensation during travel or outdoor activities.",
+    "image": "https://premeditatedleftovers.com/wp-content/uploads/2016/06/diy-soothing-summer-face-mist.jpg",
+    "category": "Skincare"
+  },
+  {
+    "id": 10,
+    "name": "Beach Tote Bag",
+    "brand": "CarryWave",
+    "price": 19,
+    "rating": 4.7,
+    "stock": 10,
+    "description": "Large-capacity beach tote bag with durable handles and spacious compartments for towels, sunscreen, snacks, and essentials. Water-resistant material makes it ideal for beach days, vacations, shopping trips, and summer outdoor adventures.",
+    "image": "https://i.pinimg.com/originals/c8/4b/3f/c84b3f9926f8db692181be021d6e37dc.jpg",
+    "category": "Accessories"
+  },
+  {
+    "id": 11,
+    "name": "Portable Mini Fan",
+    "brand": "WindGo",
+    "price": 13,
+    "rating": 4.5,
+    "stock": 16,
+    "description": "Compact rechargeable mini fan with multiple speed settings to keep you cool anywhere. Lightweight design fits easily in bags or hands, making it perfect for commuting, festivals, travel, camping, and hot summer afternoons.",
+    "image": "https://m.media-amazon.com/images/I/61LAZ9VOf4L._AC_SL1500_.jpg",
+    "category": "Electronics"
+  },
+  {
+    "id": 12,
+    "name": "Beach Volleyball",
+    "brand": "SportWave",
+    "price": 17,
+    "rating": 4.6,
+    "stock": 9,
+    "description": "High-quality beach volleyball built with durable soft-touch material for comfortable play on sand. Designed for outdoor fun with friends and family, ideal for beach tournaments, vacations, and active summer weekends.",
+    "image": "https://img.magnific.com/premium-photo/summer-vacation-volleyball_688350-6380.jpg",
+    "category": "Sports"
+  }
+]
