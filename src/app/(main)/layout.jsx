@@ -1,13 +1,13 @@
 import Footer from '@/components/shared/Footer';
 import Navbar from '@/components/shared/Navbar';
 import React from 'react';
-import ProductsPage from './products/page';
+import HomePage from '@/components/homePage/HomePage';
 
 const MainLayout = ({children}) => {
     return (
         <div>
             <Navbar/>
-            <ProductsPage/>
+            <HomePage/>            
             {children}
             <Footer/>
         </div>

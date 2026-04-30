@@ -24,7 +24,9 @@ const Navbar = () => {
                         {nevItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-lg sm:text-xl text-white">SunCart</a>
+                <Link href={'/'}>
+                    <button className="btn btn-ghost text-lg sm:text-xl text-white">SunCart</button>
+                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 space-x-2">
