@@ -33,7 +33,7 @@ const BannerSlider = () => {
     ];
 
     return (
-        <div className='h-[90vh] w-full'>
+        <div className='h-[70vh] w-full'>
             <Swiper 
             modules={[Navigation, Pagination, Autoplay]}
             navigation

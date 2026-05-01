@@ -57,6 +57,11 @@ const nextConfig = {
         hostname: 'img.magnific.com',
         pathname: '**'
       },
+      {
+        protocol: 'https',
+        hostname: 'www.flojos.com',
+        pathname: '**'
+      },
     ],
   }
 };
