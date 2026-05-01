@@ -35,10 +35,10 @@ const Navbar = () => {
             </div>
             <div className="navbar-end gap-3">
                 <Link href={'/login'}>
-                    <button className="btn text-orange-800 text-[18px]">Login</button>
+                    <button className="btn text-orange-500 text-[18px]">Login</button>
                 </Link>
                 <Link href={'/register'}>
-                    <button className="btn text-orange-800 text-[18px]">Register</button>
+                    <button className="btn text-orange-500 text-[18px]">Register</button>
                 </Link>
             </div>
         </div>
