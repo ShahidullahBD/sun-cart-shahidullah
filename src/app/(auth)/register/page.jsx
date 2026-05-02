@@ -4,21 +4,25 @@
 // dns.setServers(['8.8.8.8', '8.8.4.4']);
 
 import { authClient } from '@/lib/auth-client';
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { FaEyeSlash } from 'react-icons/fa';
+import { IoEye } from 'react-icons/io5';
 
 const RegisterPage = () => {
+
+    const [isShowPassword, setIsShowPassword] = useState(false);
 
     const { register,
         handleSubmit,
         formState: { errors },
-    } = useForm();    
+    } = useForm();
 
     const handleRegisterFunc = async (data) => {
 
 
         const { name, photo, email, password } = data;
-        console.log({name, photo, email, password});
+        console.log({ name, photo, email, password });
 
         const { data: res, error } = await authClient.signUp.email({
             name: name,
@@ -51,13 +55,18 @@ const RegisterPage = () => {
                                 <input type="text" {...register("photo")}
                                     className="input" placeholder="Phot URL" />
                                 <label className="label">Email</label>
-                                <input type="email" {...register("email", {required: "Email is required"})}
+                                <input type="email" {...register("email", { required: "Email is required" })}
                                     className="input" placeholder="Your email" />
                                 {errors.email && <p className='text-red-500'>{errors.email.message}</p>}
                                 <label className="label">Password</label>
-                                <input type="password" {...register("password", {required: "Password is required"})}                                
-                                    className="input" placeholder="Password" />
-                                {errors.password && <p className='text-red-500'>{errors.password.message}</p>} 
+                                <div className='relative'>
+                                    <input type={isShowPassword? "text" : "password"} {...register("password", { required: "Password is required" })}
+                                        className="input" placeholder="Password" />
+                                    <span className='absolute right-3 top-3 text-lg' onClick={() => setIsShowPassword(!isShowPassword)}>
+                                        {isShowPassword ? <IoEye /> : <FaEyeSlash />}
+                                    </span>
+                                </div>
+                                {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
                                 <button className="btn bg-orange-500 text-white mt-4">Register</button>
                             </fieldset>
                         </form>

@@ -72,6 +72,11 @@ const nextConfig = {
         hostname: 'hips.hearstapps.com',
         pathname: '**'
       },
+      {
+        protocol: 'https',
+        hostname: '**',
+        pathname: '**'
+      },
     ],
   }
 };

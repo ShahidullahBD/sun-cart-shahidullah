@@ -1,21 +1,26 @@
 'use client'
 import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
+import { FaEyeSlash } from 'react-icons/fa';
+import { IoEye } from 'react-icons/io5';
 
 const LoginPage = () => {
+
+    const [isShowPassword, setIsShowPassword] = useState(false);
 
     const {
         register,
         handleSubmit,
-        formState: {errors},
+        formState: { errors },
     } = useForm();
 
     const handleLoginFunc = async (data) => {
-        const {email, password} = data;
+        const { email, password } = data;
 
-        const {data: res, error} = await authClient.signIn.email({
+        const { data: res, error } = await authClient.signIn.email({
             email: email,
             password: password,
             rememberMe: true,
@@ -25,10 +30,10 @@ const LoginPage = () => {
         // console.log(error, "error");
 
         if (error) {
-            alert(error.message)
+            toast.error("Invalid Email or Password!");            
         }
         if (res) {
-            alert("SignIn Successful")
+            toast.success("Login successful!");
         }
 
     }
@@ -42,12 +47,17 @@ const LoginPage = () => {
                         <form onSubmit={handleSubmit(handleLoginFunc)}>
                             <fieldset className="fieldset">
                                 <label className="label">Email</label>
-                                <input {...register("email", {required: "Email is required"})}
+                                <input {...register("email", { required: "Email is required" })}
                                     type="email" className="input" placeholder="Email" />
                                 {errors.email && <p className='text-red-500'>{errors.email.message}</p>}
                                 <label className="label">Password</label>
-                                <input {...register("password", {required: "Password is required"})}
-                                    type="password" className="input" placeholder="Password" />
+                                <div className='relative'>
+                                    <input {...register("password", { required: "Password is required" })}
+                                        type={isShowPassword ? "text" : "password"} className="input" placeholder="Password" />
+                                    <span className='absolute right-3 top-3 text-lg' onClick={() => setIsShowPassword(!isShowPassword)}>
+                                        {isShowPassword? <IoEye/>:<FaEyeSlash />}
+                                    </span>
+                                </div>
                                 {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
                                 <div><a className="link link-hover">Forgot password?</a></div>
                                 <Link href={'/register'}><p>Do not have account? <span className='text-red-500 hover:border-b-2 border-b-red-500 font-bold'>register</span></p></Link>

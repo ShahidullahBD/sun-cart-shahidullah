@@ -3,7 +3,8 @@
 import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 import Link from "next/link";
-import { FaUserTie } from "react-icons/fa";
+import { FaGoogle, FaUserTie } from "react-icons/fa";
+import SocialLogin from "../socialLogin/SocialLogin";
 
 
 const Navbar = () => {
@@ -43,29 +44,32 @@ const Navbar = () => {
                     {nevItems}
                 </ul>
             </div>
-            {isPending? <div>
+            {isPending ? <div>
                 <span className="loading loading-spinner loading-xl"></span>
-            </div>:
-            <div className="navbar-end gap-3">
-                {user? <div className="flex gap-3 items-center">
-                    <div className="flex gap-2 items-center text-white">
-                        <p>Hello, {user.name}</p>
-                        {<Image src={user.image} alt={user.name} height={30} width={30}/>||
-                        <FaUserTie />}
-                    </div>
-                    <Link href={'/login'}>
-                        <button className="btn text-orange-500 text-[18px]" onClick={async () => await authClient.signOut()}>Logout</button>
-                    </Link>
-                </div>:
-                <div className="flex gap-3">
-                    <Link href={'/login'}>
-                        <button className="btn text-orange-500 text-[18px]">Login</button>
-                    </Link>
-                    <Link href={'/register'}>
-                        <button className="btn text-orange-500 text-[18px]">Register</button>
-                    </Link>
+            </div> :
+                <div className="navbar-end gap-3">
+                    {user ? <div className="flex gap-3 items-center">
+                        <div className="flex gap-2 items-center text-white">
+                            <p>Hello, {user.name}</p>
+                            {<Image src={user.image} alt={user.name} height={30} width={30} /> ||
+                                <FaUserTie />}
+                        </div>
+                        <Link href={'/login'}>
+                            <button className="btn text-orange-500 text-[18px]" onClick={async () => await authClient.signOut()}>Logout</button>
+                        </Link>
+                    </div> :
+                        <div className="block lg:flex md:flex gap-3 items-center">
+                            <Link href={'/login'}>
+                                <button className="btn text-orange-500 text-[18px]">Login</button>
+                            </Link>
+                            <Link href={'/register'}>
+                                <button className="btn text-orange-500 my-1 text-[18px]">Register</button>
+                            </Link>
+                            <Link href={'/register'}>
+                                <SocialLogin user={user}/>                                
+                            </Link>
+                        </div>}
                 </div>}
-            </div>}
         </div>
     );
 };
