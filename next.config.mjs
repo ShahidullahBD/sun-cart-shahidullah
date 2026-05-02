@@ -62,6 +62,16 @@ const nextConfig = {
         hostname: 'www.flojos.com',
         pathname: '**'
       },
+      {
+        protocol: 'https',
+        hostname: 'encrypted-tbn0.gstatic.com',
+        pathname: '**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'hips.hearstapps.com',
+        pathname: '**'
+      },
     ],
   }
 };

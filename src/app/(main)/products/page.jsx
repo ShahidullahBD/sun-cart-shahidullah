@@ -8,7 +8,7 @@ const ProductsPage = async () => {
 
     const res = await fetch('https://sun-cart-shahidullah.vercel.app/data.json')
     const products = await res.json();
-    console.log(products);
+    // console.log(products);
 
 
     return (

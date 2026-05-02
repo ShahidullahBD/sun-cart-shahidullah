@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 
 const ProductCart = ({ product }) => {
-    console.log(product);
+    // console.log(product);
     const { name, brand, price, rating, stock, description, image, category } = product;
     return (
         <div className='card'>
