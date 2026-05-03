@@ -4,8 +4,10 @@
 // dns.setServers(['8.8.8.8', '8.8.4.4']);
 
 import { authClient } from '@/lib/auth-client';
+import Link from 'next/link';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
 import { FaEyeSlash } from 'react-icons/fa';
 import { IoEye } from 'react-icons/io5';
 
@@ -36,7 +38,7 @@ const RegisterPage = () => {
             alert(error.message)
         }
         if (res) {
-            alert("SignUp Successful")
+            toast.success("Register successful!");
         }
     }
 
@@ -60,14 +62,16 @@ const RegisterPage = () => {
                                 {errors.email && <p className='text-red-500'>{errors.email.message}</p>}
                                 <label className="label">Password</label>
                                 <div className='relative'>
-                                    <input type={isShowPassword? "text" : "password"} {...register("password", { required: "Password is required" })}
+                                    <input type={isShowPassword ? "text" : "password"} {...register("password", { required: "Password is required" })}
                                         className="input" placeholder="Password" />
                                     <span className='absolute right-3 top-3 text-lg' onClick={() => setIsShowPassword(!isShowPassword)}>
                                         {isShowPassword ? <IoEye /> : <FaEyeSlash />}
                                     </span>
                                 </div>
                                 {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
-                                <button className="btn bg-orange-500 text-white mt-4">Register</button>
+                                <Link href={'/login'}>
+                                    <button className="btn bg-orange-500 text-white mt-4">Register</button>
+                                </Link>
                             </fieldset>
                         </form>
                     </div>

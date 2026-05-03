@@ -21,7 +21,7 @@ const Footer = () => {
                 <div className='space-y-2'>
                     <h2 className='text-2xl font-bold'>Social links</h2>
                     <hr />
-                    <div className='flex gap-4 my-3'>
+                    <div className='lg:flex gap-4 my-3'>
                         <Link href={'https://www.facebook.com/shahidullahkorea'}>
                             <button className='btn bg-white text-blue-500 font-bold'>Facebook</button>
                         </Link>

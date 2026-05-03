@@ -30,7 +30,7 @@ const LoginPage = () => {
         // console.log(error, "error");
 
         if (error) {
-            toast.error("Invalid Email or Password!");            
+            toast.error("Invalid Email or Password!");
         }
         if (res) {
             toast.success("Login successful!");
@@ -55,13 +55,15 @@ const LoginPage = () => {
                                     <input {...register("password", { required: "Password is required" })}
                                         type={isShowPassword ? "text" : "password"} className="input" placeholder="Password" />
                                     <span className='absolute right-3 top-3 text-lg' onClick={() => setIsShowPassword(!isShowPassword)}>
-                                        {isShowPassword? <IoEye/>:<FaEyeSlash />}
+                                        {isShowPassword ? <IoEye /> : <FaEyeSlash />}
                                     </span>
                                 </div>
                                 {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
                                 <div><a className="link link-hover">Forgot password?</a></div>
                                 <Link href={'/register'}><p>Do not have account? <span className='text-red-500 hover:border-b-2 border-b-red-500 font-bold'>register</span></p></Link>
-                                <button className="btn bg-orange-500 text-white mt-4">Login</button>
+                                <Link href={'/'}>
+                                    <button className="btn bg-orange-500 text-white mt-4">Login</button>
+                                </Link>
                             </fieldset>
                         </form>
                     </div>

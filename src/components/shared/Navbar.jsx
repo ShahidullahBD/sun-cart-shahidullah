@@ -3,14 +3,14 @@
 import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 import Link from "next/link";
-import { FaGoogle, FaUserTie } from "react-icons/fa";
+import { FaUserTie } from "react-icons/fa";
 import SocialLogin from "../socialLogin/SocialLogin";
 
 
 const Navbar = () => {
 
     const { data: session, isPending } = authClient.useSession();
-    console.log(isPending, 'pending');
+    // console.log(isPending, 'pending');
     const user = session?.user;
     // console.log(user);
 

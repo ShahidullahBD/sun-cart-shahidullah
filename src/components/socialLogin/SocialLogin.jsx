@@ -1,6 +1,6 @@
 import { authClient } from '@/lib/auth-client';
 import React from 'react';
-import { FaGoogle } from 'react-icons/fa';
+import { FcGoogle } from 'react-icons/fc';
 
 const SocialLogin = ({ user }) => {
 
@@ -14,7 +14,7 @@ const SocialLogin = ({ user }) => {
         <div>
             {user ? "" :
                 <button onClick={handleGoogleLogin}
-                    className="btn text-orange-500 text-[18px]">Login by <FaGoogle />
+                    className="btn text-orange-500 text-[18px]">Login by <FcGoogle />
                 </button>
             }
         </div>
