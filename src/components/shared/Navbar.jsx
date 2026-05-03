@@ -55,7 +55,7 @@ const Navbar = () => {
                                 <FaUserTie />}
                         </div>
                         <Link href={'/login'}>
-                            <button className="btn text-orange-500 text-[18px]" onClick={async () => await authClient.signOut()}>Logout</button>
+                            <button className="btn lg:btn-md md:btn-md btn-xs text-orange-500 text-[12px] md:text-[16px] lg:text-[18px]" onClick={async () => await authClient.signOut()}>Logout</button>
                         </Link>
                     </div> :
                         <div className="block lg:flex md:flex gap-3 items-center">
@@ -65,8 +65,8 @@ const Navbar = () => {
                             <Link href={'/register'}>
                                 <button className="btn text-orange-500 my-1 text-[18px]">Register</button>
                             </Link>
-                            <Link href={'/register'}>
-                                <SocialLogin user={user}/>                                
+                            <Link href={'/products'}>
+                                <SocialLogin user={user} />
                             </Link>
                         </div>}
                 </div>}

@@ -18,5 +18,10 @@ export const auth = betterAuth({
             clientId: process.env.GOOGLE_CLIENT_ID,
             clientSecret: process.env.GOOGLE_CLIENT_CECRET
         }
-    }
+    },
+    trustedOrigins: [
+    "http://localhost:3000",
+    "https://yourproject.vercel.app"
+  ]
 });
+

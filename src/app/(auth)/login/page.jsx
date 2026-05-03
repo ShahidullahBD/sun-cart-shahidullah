@@ -1,5 +1,6 @@
 'use client'
 import { authClient } from '@/lib/auth-client';
+import { redirect } from 'next/dist/server/api-utils';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -34,6 +35,7 @@ const LoginPage = () => {
         }
         if (res) {
             toast.success("Login successful!");
+            redirect('products');
         }
 
     }
@@ -61,9 +63,8 @@ const LoginPage = () => {
                                 {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
                                 <div><a className="link link-hover">Forgot password?</a></div>
                                 <Link href={'/register'}><p>Do not have account? <span className='text-red-500 hover:border-b-2 border-b-red-500 font-bold'>register</span></p></Link>
-                                <Link href={'/'}>
-                                    <button className="btn bg-orange-500 text-white mt-4">Login</button>
-                                </Link>
+                                <button className="btn bg-orange-500 text-white mt-4">Login</button>
+                                
                             </fieldset>
                         </form>
                     </div>

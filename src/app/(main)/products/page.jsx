@@ -14,7 +14,7 @@ const ProductsPage = async () => {
     return (
         <div>
             <BannerSlider />
-            <div className="grid grid-cols-3 gap-5">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-5 gap-2">
 
                 {
                     products.slice(0, 3).map((product) => {

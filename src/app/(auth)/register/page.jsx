@@ -1,10 +1,8 @@
 'use client'
 
-// import dns from 'node:dns';
-// dns.setServers(['8.8.8.8', '8.8.4.4']);
-
 import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
@@ -31,14 +29,16 @@ const RegisterPage = () => {
             image: photo,
             email: email,
             password: password,
-            callbackURL: "/products"
+            callbackURL: "/login"
         })
+        console.log(error, 'err');
 
         if (error) {
             alert(error.message)
         }
         if (res) {
             toast.success("Register successful!");
+            redirect('/login')
         }
     }
 
@@ -69,9 +69,7 @@ const RegisterPage = () => {
                                     </span>
                                 </div>
                                 {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
-                                <Link href={'/login'}>
-                                    <button className="btn bg-orange-500 text-white mt-4">Register</button>
-                                </Link>
+                                <button className="btn bg-orange-500 text-white mt-4">Register</button>
                             </fieldset>
                         </form>
                     </div>
